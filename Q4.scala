@@ -7,7 +7,8 @@ object Q4{
         var account5 = new Account("200114404593", 2005, -34000);
 
         var Bank:List[Account] =List(account1, account2, account3, account4, account5);
-        println("Accounts with negative balances: " + negativeBalanceAccount(Bank));
+        println("Accounts with negative balances: ");
+        println(negativeBalanceAccount(Bank).foreach(Account => println(Account.accountNumber)));
         println("Sum of all Accounts: "+totalBalance(Bank));
         println("Final Balance After Adding Interest: " + finalBalance(Bank));
     }
